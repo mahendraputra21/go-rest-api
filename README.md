@@ -12,6 +12,13 @@ In this repository, we are creating an sample rest API that will allow customer 
 
 ## How to run 
 * clone this repository first
+* please set the .env file to connect your postgredb ```POSTGRES_URL="dbname=<dbName> user=<user> password=<Password> host=<host> sslmode=disable"```
+* set the path to load .env file
+  ```
+  func CreateConnection() *sql.DB {
+	//load .env file
+	err := godotenv.Load(os.ExpandEnv("go-rest-api/.env")) //please set path for the .env if you got the error message
+  ```
 * run ```go install github.com/pressly/goose/v3/cmd/goose@latest```
 * run ```go build goose.go```
 * run ```cd db```
