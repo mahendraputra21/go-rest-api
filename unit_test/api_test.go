@@ -52,7 +52,7 @@ func TestPOSTProductControl(t *testing.T) {
 
 	rr := httptest.NewRecorder()
 
-	handler := http.HandlerFunc(controller.POSTProductController)
+	handler := http.HandlerFunc(controller.POSTProductControl)
 
 	handler.ServeHTTP(rr, req)
 
@@ -107,7 +107,7 @@ func TestGETProductById(t *testing.T) {
 	q.Add("id", param)
 	req.URL.RawQuery = q.Encode()
 	rr := httptest.NewRecorder()
-	handler := http.HandlerFunc(controller.GETProductByIdController)
+	handler := http.HandlerFunc(controller.GETProductByIdControl)
 	handler.ServeHTTP(rr, req)
 	if status := rr.Code; status != http.StatusOK {
 		t.Errorf("handler returned wrong status code: got %v want %v", status, http.StatusOK)
@@ -142,7 +142,7 @@ func TestGETProductByBrandId(t *testing.T) {
 	q.Add("id", param)
 	req.URL.RawQuery = q.Encode()
 	rr := httptest.NewRecorder()
-	handler := http.HandlerFunc(controller.GETProductByBrandId)
+	handler := http.HandlerFunc(controller.GETProductByBrandIdControl)
 	handler.ServeHTTP(rr, req)
 	if status := rr.Code; status != http.StatusOK {
 		t.Errorf("handler returned wrong status code: got %v want %v", status, http.StatusOK)

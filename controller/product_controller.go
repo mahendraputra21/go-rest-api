@@ -10,7 +10,7 @@ import (
 	"strconv"
 )
 
-func POSTProductController(w http.ResponseWriter, r *http.Request) {
+func POSTProductControl(w http.ResponseWriter, r *http.Request) {
 
 	helper.EnableCors(&w)
 
@@ -47,7 +47,7 @@ func POSTProductController(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(res)
 }
 
-func GETProductByIdController(w http.ResponseWriter, r *http.Request) {
+func GETProductByIdControl(w http.ResponseWriter, r *http.Request) {
 
 	helper.EnableCors(&w)
 
@@ -79,7 +79,7 @@ func GETProductByIdController(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(res)
 }
 
-func GETProductByBrandId(w http.ResponseWriter, r *http.Request) {
+func GETProductByBrandIdControl(w http.ResponseWriter, r *http.Request) {
 
 	helper.EnableCors(&w)
 

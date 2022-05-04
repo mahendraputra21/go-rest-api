@@ -21,11 +21,11 @@ func newRoute(method, pattern string, handler http.HandlerFunc) route {
 }
 
 var routes = []route{
-	newRoute("GET", "/product", controller.GETProductByIdController),
-	newRoute("GET", "/product/brand", controller.GETProductByBrandId),
+	newRoute("GET", "/product", controller.GETProductByIdControl),
+	newRoute("GET", "/product/brand", controller.GETProductByBrandIdControl),
 	newRoute("GET", "/order", controller.GetOrderDetailByIdControl),
 	newRoute("POST", "/brand", controller.POSTBrandControl),
-	newRoute("POST", "/product", controller.POSTProductController),
+	newRoute("POST", "/product", controller.POSTProductControl),
 	newRoute("POST", "/order", controller.POSTOrderControl),
 }
 
