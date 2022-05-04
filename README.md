@@ -15,7 +15,7 @@ In this repository, we are creating an sample rest API that will allow customer 
 * run ```go install github.com/pressly/goose/v3/cmd/goose@latest```
 * run ```go build goose.go```
 * run ```cd db```
-* run ``goose postgres "user=<user> password=<password> dbname=<dbname> sslmode=disable" up```    
+* run ```goose postgres "user=<user> password=<password> dbname=<dbname> sslmode=disable" up````   
 * run this command ```go run main.go```
 
 ## Endpoint Routes 
@@ -31,6 +31,27 @@ In this repository, we are creating an sample rest API that will allow customer 
 
 
 ## Results in test.http (using extension REST Client)
-* Brand
-* Product
-* Transaction / Order
+### Test Create brand endpoint
+  #### Request
+  ```
+   POST http://localhost:8080/brand
+   Content-Type: application/json
+   {
+    "brand_name": "Samsung"
+   }
+  ```
+   #### Response
+   ```
+   HTTP/1.1 200 OK
+  Access-Control-Allow-Origin: *
+  Date: Wed, 04 May 2022 11:11:57 GMT
+  Content-Length: 40
+  Content-Type: text/plain; charset=utf-8
+  Connection: close
+
+  {
+  "id": 7,
+  "message": "New Brand is Added"
+  }
+   ```
+
