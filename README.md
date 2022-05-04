@@ -55,3 +55,15 @@ In this repository, we are creating an sample rest API that will allow customer 
   }
    ```
 
+## References
+* https://github.com/pressly/goose
+* https://golang.org/pkg/net/http/#NewServeMux
+* https://pkg.go.dev/encoding/json
+* https://pkg.go.dev/io/ioutil
+* https://pkg.go.dev/net/http
+* https://pkg.go.dev/log
+* https://pkg.go.dev/strings
+* https://pkg.go.dev/regexp
+* https://pkg.go.dev/context
+* https://pkg.go.dev/database/sql
+
