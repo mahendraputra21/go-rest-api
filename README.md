@@ -1,4 +1,4 @@
-# Build a RESTful JSON API with GOlang
+# Build a RESTful JSON API with GO and PostgreSQL
 In this repository, we are creating an sample rest API that will allow customer to :
 * create and view brand and product 
 * make transaction order 
