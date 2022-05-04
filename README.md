@@ -15,7 +15,7 @@ In this repository, we are creating an sample rest API that will allow customer 
 * run ```go install github.com/pressly/goose/v3/cmd/goose@latest```
 * run ```go build goose.go```
 * run ```cd db```
-* run ```goose postgres "user=<user> password=<password> dbname=<dbname> sslmode=disable" up````   
+* run ```goose postgres "user=<user> password=<password> dbname=<dbname> sslmode=disable" up```  
 * run this command ```go run main.go```
 
 ## Endpoint Routes 
