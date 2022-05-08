@@ -1,9 +1,9 @@
-package command_query
+package command
 
 import (
 	"fmt"
+	"go-rest-api/app/model"
 	"go-rest-api/helper"
-	"go-rest-api/model"
 	"log"
 )
 

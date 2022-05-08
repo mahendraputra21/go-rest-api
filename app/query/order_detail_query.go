@@ -1,8 +1,8 @@
-package command_query
+package query
 
 import (
+	"go-rest-api/app/model"
 	"go-rest-api/helper"
-	"go-rest-api/model"
 	"log"
 )
 

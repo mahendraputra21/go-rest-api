@@ -3,7 +3,7 @@ package helper
 import (
 	"database/sql"
 	"encoding/json"
-	"go-rest-api/model"
+	"go-rest-api/app/model"
 	"net/http"
 )
 

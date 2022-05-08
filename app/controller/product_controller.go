@@ -2,9 +2,10 @@ package controller
 
 import (
 	"encoding/json"
-	"go-rest-api/command_query"
+	"go-rest-api/app/command"
+	"go-rest-api/app/model"
+	"go-rest-api/app/query"
 	"go-rest-api/helper"
-	"go-rest-api/model"
 	"log"
 	"net/http"
 	"strconv"
@@ -35,7 +36,7 @@ func POSTProductControl(w http.ResponseWriter, r *http.Request) {
 	}
 
 	//call AddNewProduct function then insert the new Product
-	insertID := command_query.AddNewProduct(product)
+	insertID := command.AddNewProduct(product)
 
 	//format the response object
 	res := helper.Response{
@@ -51,8 +52,8 @@ func GETProductByIdControl(w http.ResponseWriter, r *http.Request) {
 
 	helper.EnableCors(&w)
 
-	query := r.URL.Query()
-	param := query.Get("id")
+	queryParam := r.URL.Query()
+	param := queryParam.Get("id")
 
 	if param == "" {
 		log.Fatalf("Param is empty")
@@ -62,7 +63,7 @@ func GETProductByIdControl(w http.ResponseWriter, r *http.Request) {
 	id, err := strconv.Atoi(param)
 
 	//call product query
-	product, err := command_query.GetProductById(int16(id))
+	product, err := query.GetProductById(int16(id))
 
 	if err != nil {
 		log.Fatalf("Cannot get data product %v", err)
@@ -83,8 +84,8 @@ func GETProductByBrandIdControl(w http.ResponseWriter, r *http.Request) {
 
 	helper.EnableCors(&w)
 
-	query := r.URL.Query()
-	param := query.Get("id")
+	queryParam := r.URL.Query()
+	param := queryParam.Get("id")
 
 	if param == "" {
 		log.Fatalf("Param is empty")
@@ -94,7 +95,7 @@ func GETProductByBrandIdControl(w http.ResponseWriter, r *http.Request) {
 	id, err := strconv.Atoi(param)
 
 	//call product query
-	product, err := command_query.GetProductByBrandId(int16(id))
+	product, err := query.GetProductByBrandId(int16(id))
 
 	if err != nil {
 		log.Fatalf("Cannot get data product by Brand id %v", err)

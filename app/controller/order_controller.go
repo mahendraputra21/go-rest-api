@@ -2,9 +2,10 @@ package controller
 
 import (
 	"encoding/json"
-	"go-rest-api/command_query"
+	"go-rest-api/app/command"
+	"go-rest-api/app/model"
+	"go-rest-api/app/query"
 	"go-rest-api/helper"
-	"go-rest-api/model"
 	"log"
 	"net/http"
 	"strconv"
@@ -25,7 +26,7 @@ func POSTOrderControl(w http.ResponseWriter, r *http.Request) {
 	}
 
 	//call AddNewOrder function then insert the new order
-	insertID := command_query.AddNewOrder(order)
+	insertID := command.AddNewOrder(order)
 
 	//format the response object
 	res := helper.Response{
@@ -41,8 +42,8 @@ func GetOrderDetailByIdControl(w http.ResponseWriter, r *http.Request) {
 
 	helper.EnableCors(&w)
 
-	query := r.URL.Query()
-	param := query.Get("id")
+	queryParam := r.URL.Query()
+	param := queryParam.Get("id")
 
 	if param == "" {
 		log.Fatalf("Param is empty")
@@ -52,7 +53,7 @@ func GetOrderDetailByIdControl(w http.ResponseWriter, r *http.Request) {
 	id, err := strconv.Atoi(param)
 
 	//call product query
-	order, err := command_query.GetOrderDetailById(int16(id))
+	order, err := query.GetOrderDetailById(int16(id))
 
 	if err != nil {
 		log.Fatalf("Cannot get data Order detail %v", err)
