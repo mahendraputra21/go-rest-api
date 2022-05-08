@@ -27,7 +27,7 @@ Content-Type: application/json
 }
 ### Test Create Order endpoint
 
-GET http://localhost:8080/product?id=6
+GET http://localhost:8080/product?id=5
 ### Test Get Product By id
 
 GET http://localhost:8080/product/brand?id=5

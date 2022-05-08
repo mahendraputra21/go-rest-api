@@ -2,7 +2,7 @@ package router
 
 import (
 	"context"
-	"go-rest-api/controller"
+	"go-rest-api/app/controller"
 	"net/http"
 	"regexp"
 	"strings"

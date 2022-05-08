@@ -2,7 +2,7 @@ package unit_test
 
 import (
 	"bytes"
-	"go-rest-api/controller"
+	"go-rest-api/app/controller"
 	"net/http"
 	"net/http/httptest"
 	"testing"

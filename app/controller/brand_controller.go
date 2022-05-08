@@ -2,9 +2,9 @@ package controller
 
 import (
 	"encoding/json"
-	"go-rest-api/command_query"
+	"go-rest-api/app/command"
+	"go-rest-api/app/model"
 	"go-rest-api/helper"
-	"go-rest-api/model"
 	"log"
 	"net/http"
 )
@@ -34,7 +34,7 @@ func POSTBrandControl(w http.ResponseWriter, r *http.Request) {
 	}
 
 	//call AddNewBrand function then insert the new brand
-	insertID := command_query.AddNewBrand(brand)
+	insertID := command.AddNewBrand(brand)
 
 	//format the response object
 	res := helper.Response{
