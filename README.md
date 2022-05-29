@@ -27,14 +27,14 @@ In this repository, we are creating an sample rest API that will allow customer 
 
 ## Endpoint Routes 
 
-| Endpoint | Path  | Method  | Description
-| ------- | --- | --- | ----------- |
-| Create Brand | /brand | POST | Create brand endpoint |
-| Create Product | /product | POST | Create product endpoint |
-| Get Single Product | /product? | GET | Retrieve product with querystring, you can use product id, eg:/product?id=123|
-| Get All Product by Brand | /product/brand? | GET | Retrieve all products by brand with querystring, you can use brand id, eg:/product/brand?id=123|
-| Make an transaction/order | /order | POST | Make a new purchase with how many products that customer buys. Eg: Grand total for Buy 2 products with price @Rp. 500,00 Rp. 1,000,00|
-| Transaction Detail | /order? | GET | Retrieve transaction detail with querystring, you can use order/?id=123|
+| Endpoint | Path  | Method  | 
+| ------- | --- | --- | 
+| Create Brand | /brand | POST | 
+| Create Product | /product | POST |
+| Get Single Product | /product? | GET | 
+| Get All Product by Brand | /product/brand? | GET | 
+| Make an transaction/order | /order | POST |
+| Transaction Detail | /order? | GET | 
 
 
 ## Results in test.http (using extension REST Client)
